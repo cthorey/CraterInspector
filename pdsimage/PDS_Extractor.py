@@ -157,7 +157,7 @@ class BinaryTable(object):
         ''' helper for downloading the file '''
 
         current = blocknr * blocksize
-        sys.stdout.write("\r{0:.2f}%".format(100.0 * current / size))
+        sys.stdout.write("\r{:.2%}".format(current / size))
 
     def _downloadfile(self, url, fname):
         ''' Download the image '''
